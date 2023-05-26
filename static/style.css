@@ -1,0 +1,70 @@
+HTML{
+   background-color:rgb(71, 238, 182);
+}
+header {
+   margin-left: 35px;
+   font-size: 35px;
+   color: blueviolet;
+}
+header h2{
+   font-size: 25px;
+   margin-left: 55px;
+}
+
+.Translation{
+   justify-content: center;
+   display: grid;
+   grid-template-columns: 33% 20px 33%;
+   grid-template-rows: 25%;
+   column-gap: 25px;
+}
+#FORM{
+   justify-content: center;
+   display: grid;
+   grid-template-columns: 33% 125px 33%;
+   grid-template-rows: 25%;
+   column-gap: 10px;
+
+}
+
+#Translating_Text{
+   font-size: 25px;
+   color: rgb(226, 43, 98);
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+}
+
+#Translating{
+   grid-row-start: 3;
+   grid-column-start: 1;
+}
+
+#Translated_Text{
+   font-size: 25px;
+   color: rgb(226, 43, 98);
+   grid-row-start: 1;
+   grid-column-start: 3;
+}
+
+#Translated{
+   grid-row-start: 3;
+   grid-column-start: 3;
+}
+
+#Translate{
+   border-radius: 5px;
+   margin-top: 10px;
+   grid-row-start: 2;
+   grid-column-start: 2;
+}
+
+#langu-select-src{
+   grid-row-start: 1;
+   grid-column-start: 1;
+}
+
+#langu-select-dst{
+   grid-row-start: 1;
+   grid-column-start: 3;
+}

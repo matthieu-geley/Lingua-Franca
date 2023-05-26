@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>Lingua Franca</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+   <!-- <link rel="stylesheet" type="text/css" href="../static/style.css" /> -->
+   <script src="{{ url_for('static', filename='script.js') }}"></script>
+   <!-- <script src='../static/script.js'></script> -->
+
+
+</head>
+
+<body>
+   <header>
+         <h1>Lingua Franca:</h1>
+         <br>
+         <h2>Traducteur en ligne</h2>
+
+   </header>
+   <div class="Translation">
+      <label id="Translating_Text">Votre texte à traduire:</label>
+      <br>
+           
+      <label id="Translated_Text">Votre traduction:</label>
+      <br>
+   </div>
+
+      {% block content %}
+      <form action="#" method="post" id="FORM">
+         <textarea type="text" id="Translating" name="translating">{{ tralatingtext }}</textarea>
+         <input type="submit" id="Translate" value="Traduire"/>
+         <textarea type="text" id="Translated" name="translated" disabled>{{ tralatedtext }}</textarea>
+         <select name="LanguageSRC" id="langu-select-src">
+         <option value="{{keySRC}}">{{valueSRC}}</option>
+         <option value="AUTO">Detection auto</option>
+         {% for key, value in languages.items() %}
+         <option value="{{key}}">{{value}}</option>
+         {% endfor %}
+         </select>
+
+         <select name="LanguageDST" id="langu-select-dst">
+            <option value="{{keyDST}}">{{valueDST}}</option>
+            {% for key, value in languages.items() %}
+            <option value="{{key}}">{{value}}</option>
+            {% endfor %}
+         </select>
+
+      <br>
+      </form>
+      {% endblock %}
+      
+   
+   <footer>
+
+
+   </footer>
+
+</body>
+</html>
